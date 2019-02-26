@@ -375,8 +375,8 @@ class DlgImportVector(QDialog, Ui_Dialog):
         # add comment on table
         supportCom = self.db.supportsComment()
         if self.chkCom.isEnabled() and self.chkCom.isChecked() and supportCom:
-            # using connector executing COMMENT ON TABLE query (with editCome.text() value)
-            com = self.editCome.text()
+            # using connector executing COMMENT ON TABLE query (with editCom.text() value)
+            com = self.editCom.text()
             self.db.connector.commentTable(schema, table, com)
 
         self.db.connection().reconnect()
